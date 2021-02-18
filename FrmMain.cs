@@ -38,14 +38,9 @@ namespace OpcUaWinForms {
         /// </summary>
         protected override CreateParams CreateParams {
             get {
-                // --
-                // https://docs.microsoft.com/en-us/windows/win32/winmsg/window-styles
-                // --
                 var Params = base.CreateParams;
                 Params.ExStyle |= 0x00000080; // WS_EX_TOOLWINDOW 
-                Params.ExStyle |= 0x00000008; // WS_EX_TOPMOST: top most;
-                // WS_EX_NOACTIVATE: can't be activated.
-                // WS_MINIMIZE | WS_ICONIC (?)
+                //Params.ExStyle |= 0x00000008; // WS_EX_TOPMOST: top most
                 return Params;
             }
         }
